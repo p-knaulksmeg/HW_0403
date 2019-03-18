@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/podcastOneImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_1" />
+
+    <TextView
+        android:id="@+id/playPodcastOneTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:lines="1"
+        android:text="Gingerbread podcast"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/podcastOneContinuePlayButton"
+        app:layout_constraintStart_toEndOf="@+id/podcastOneImageView"
+        app:layout_constraintTop_toTopOf="@+id/podcastOneImageView" />
+
+    <TextView
+        android:id="@+id/timePlayPodcastOneTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="10 days ago • 23 min"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastOneImageView"
+        app:layout_constraintStart_toEndOf="@+id/podcastOneImageView" />
+
+    <Button
+        android:id="@+id/podcastOneContinuePlayButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastOneImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/podcastOneImageView" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/Divider"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/podcastOneImageView" />
+
+    <ImageView
+        android:id="@+id/podcastTwoImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:srcCompat="@drawable/image_2" />
+
+    <TextView
+        android:id="@+id/podcastTwoTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:lines="1"
+        android:text="Honeycomb podcast"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/podcastTwoPlayButton"
+        app:layout_constraintStart_toEndOf="@+id/podcastTwoImageView"
+        app:layout_constraintTop_toTopOf="@+id/podcastTwoImageView" />
+
+    <TextView
+        android:id="@+id/timePodcastTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="11 days ago • 30 min"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastTwoImageView"
+        app:layout_constraintStart_toEndOf="@+id/podcastTwoImageView" />
+
+    <Button
+        android:id="@+id/podcastTwoPlayButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastTwoImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/podcastTwoImageView" />
+
+    <View
+        android:id="@+id/divider2"
+        style="@style/Divider"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/podcastTwoImageView" />
+
+    <TextView
+        android:id="@+id/podcastThreeTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:lines="1"
+        android:text="Jelly bean podcast"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/podcastThreePlayButton"
+        app:layout_constraintStart_toEndOf="@+id/podcastThreeImageView"
+        app:layout_constraintTop_toTopOf="@+id/podcastThreeImageView" />
+
+    <TextView
+        android:id="@+id/timePodcastThreeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="12 days ago • 43 min"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastThreeImageView"
+        app:layout_constraintStart_toEndOf="@+id/podcastThreeImageView" />
+
+    <Button
+        android:id="@+id/podcastThreePlayButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/ic_play"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastThreeImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/podcastThreeImageView" />
+
+    <ImageView
+        android:id="@+id/podcastThreeImageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:srcCompat="@drawable/image_3" />
+
+    <View
+        android:id="@+id/divider3"
+        style="@style/Divider"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/podcastThreeImageView" />
+
+    <Button
+        android:id="@+id/toAllEpisodesButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/ic_forward"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/allNewEpisodesLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="All new episodes"
+        android:textColor="@color/colorGooglePodcastsBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/toAllEpisodesButton"
+        app:layout_constraintStart_toEndOf="@+id/toAllEpisodesButton"
+        app:layout_constraintTop_toTopOf="@+id/toAllEpisodesButton" />
+
+</android.support.constraint.ConstraintLayout>

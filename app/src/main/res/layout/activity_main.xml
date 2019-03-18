@@ -4,15 +4,189 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".MainActivity">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/mainPodcastsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/Base.Widget.AppCompat.Light.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_toolbar_search">
+
+        <ImageView
+            android:id="@+id/titleImageView"
+            android:layout_width="256dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_google_podcasts_logo"
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/podcastOneImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/podcastTwoImageView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainPodcastsToolbar"
+        app:srcCompat="@drawable/image_1" />
+
+    <ImageView
+        android:id="@+id/podcastTwoImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/podcastThreeImageView"
+        app:layout_constraintStart_toEndOf="@+id/podcastOneImageView"
+        app:layout_constraintTop_toBottomOf="@+id/mainPodcastsToolbar"
+        app:srcCompat="@drawable/image_2" />
+
+    <ImageView
+        android:id="@+id/podcastThreeImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toStartOf="@+id/podcastFourImageView"
+        app:layout_constraintStart_toEndOf="@+id/podcastTwoImageView"
+        app:layout_constraintTop_toBottomOf="@+id/mainPodcastsToolbar"
+        app:srcCompat="@drawable/image_3" />
+
+    <ImageView
+        android:id="@+id/podcastFourImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/podcastThreeImageView"
+        app:layout_constraintTop_toBottomOf="@+id/mainPodcastsToolbar"
+        app:srcCompat="@drawable/image_4" />
+
+    <ImageView
+        android:id="@+id/podcastFiveImageView"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/podcastOneImageView"
+        app:layout_constraintTop_toBottomOf="@+id/podcastOneImageView"
+        app:srcCompat="@drawable/image_5" />
+
     <TextView
+        android:id="@+id/labelNewOneTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_new_podcast_label"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="New"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastOneImageView"
+        app:layout_constraintStart_toStartOf="@+id/podcastOneImageView" />
+
+    <TextView
+        android:id="@+id/labelNewTwoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_new_podcast_label"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="New"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/podcastTwoImageView"
+        app:layout_constraintStart_toStartOf="@+id/podcastTwoImageView" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/forYouCardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/podcastFiveImageView"
+        app:tabIndicatorColor="@color/colorGooglePodcastsBlue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/forYouLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:text="For you"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/forYouTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicator="@drawable/bg_for_you_tablayout_indicator"
+                app:tabIndicatorColor="@color/colorGooglePodcastsBlue"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorHeight="4dp"
+                app:tabMode="scrollable"
+                app:tabRippleColor="@color/colorGooglePodcastsForYouTabLayoutRipple"
+                app:tabSelectedTextColor="@color/colorGooglePodcastsBlue"
+                app:tabTextAppearance="@style/TextAppearance.AppCompat"
+                app:tabUnboundedRipple="false">
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New episodes" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="In progress" />
+
+                <android.support.design.widget.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Downloads" />
+            </android.support.design.widget.TabLayout>
+
+            <View style="@style/Divider" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/forYouViewPager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>
